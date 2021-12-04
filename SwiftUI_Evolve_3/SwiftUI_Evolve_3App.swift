@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUI_Evolve_3App: App {
     var body: some Scene {
         WindowGroup {
-            ViewModifierBootcamp()
+            //ViewModifierBootcamp()
+            AnyTransitionBootcamp()
         }
     }
 }
