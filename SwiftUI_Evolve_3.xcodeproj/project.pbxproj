@@ -15,6 +15,7 @@
 		7F9CCF42275B5B5D007A3B26 /* AnyTransitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9CCF41275B5B5D007A3B26 /* AnyTransitionBootcamp.swift */; };
 		7F9CCF45275B8630007A3B26 /* MatchedGeometryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9CCF44275B8630007A3B26 /* MatchedGeometryEffect.swift */; };
 		7F9CCF48275BB7D3007A3B26 /* CustomShapesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9CCF47275BB7D3007A3B26 /* CustomShapesBootcamp.swift */; };
+		7F9CCF4B275BC658007A3B26 /* CustomCurvesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9CCF4A275BC658007A3B26 /* CustomCurvesBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7F9CCF41275B5B5D007A3B26 /* AnyTransitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootcamp.swift; sourceTree = "<group>"; };
 		7F9CCF44275B8630007A3B26 /* MatchedGeometryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffect.swift; sourceTree = "<group>"; };
 		7F9CCF47275BB7D3007A3B26 /* CustomShapesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapesBootcamp.swift; sourceTree = "<group>"; };
+		7F9CCF4A275BC658007A3B26 /* CustomCurvesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCurvesBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				7F9CCF41275B5B5D007A3B26 /* AnyTransitionBootcamp.swift */,
 				7F9CCF44275B8630007A3B26 /* MatchedGeometryEffect.swift */,
 				7F9CCF47275BB7D3007A3B26 /* CustomShapesBootcamp.swift */,
+				7F9CCF4A275BC658007A3B26 /* CustomCurvesBootcamp.swift */,
 				7F9CCF2E275B2B9E007A3B26 /* Assets.xcassets */,
 				7F9CCF33275B2B9E007A3B26 /* Info.plist */,
 				7F9CCF30275B2B9E007A3B26 /* Preview Content */,
@@ -156,6 +159,7 @@
 				7F9CCF2B275B2B9C007A3B26 /* SwiftUI_Evolve_3App.swift in Sources */,
 				7F9CCF45275B8630007A3B26 /* MatchedGeometryEffect.swift in Sources */,
 				7F9CCF48275BB7D3007A3B26 /* CustomShapesBootcamp.swift in Sources */,
+				7F9CCF4B275BC658007A3B26 /* CustomCurvesBootcamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

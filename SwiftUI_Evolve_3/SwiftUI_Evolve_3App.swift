@@ -13,7 +13,8 @@ struct SwiftUI_Evolve_3App: App {
         WindowGroup {
             //ViewModifierBootcamp()
 //            AnyTransitionBootcamp()
-            MatchedGeometryEffectExample()
+//            MatchedGeometryEffectExample()
+            CustomCurvesBootcamp()
         }
     }
 }
