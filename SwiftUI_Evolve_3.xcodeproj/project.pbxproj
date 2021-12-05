@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F121812275D2347004BC818 /* GeometryPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F121811275D2347004BC818 /* GeometryPreferenceKeyBootcamp.swift */; };
-		7F12181B275D3918004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12181A275D3918004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
 		7F9CCF2B275B2B9C007A3B26 /* SwiftUI_Evolve_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9CCF2A275B2B9C007A3B26 /* SwiftUI_Evolve_3App.swift */; };
 		7F9CCF2F275B2B9E007A3B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9CCF2E275B2B9E007A3B26 /* Assets.xcassets */; };
 		7F9CCF32275B2B9E007A3B26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9CCF31275B2B9E007A3B26 /* Preview Assets.xcassets */; };
@@ -26,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		7F121811275D2347004BC818 /* GeometryPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
-		7F12181A275D3918004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		7F9CCF27275B2B9C007A3B26 /* SwiftUI_Evolve_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Evolve_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9CCF2A275B2B9C007A3B26 /* SwiftUI_Evolve_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Evolve_3App.swift; sourceTree = "<group>"; };
 		7F9CCF2E275B2B9E007A3B26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 		7F12180F275D231B004BC818 /* PreferenceKeyBootcamp */ = {
 			isa = PBXGroup;
 			children = (
-				7F12181A275D3918004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 				7F9CCF57275CEB3F007A3B26 /* PreferenceKeyBootcamp.swift */,
 				7F121811275D2347004BC818 /* GeometryPreferenceKeyBootcamp.swift */,
 			);
@@ -190,7 +187,6 @@
 				7F9CCF45275B8630007A3B26 /* MatchedGeometryEffect.swift in Sources */,
 				7F9CCF48275BB7D3007A3B26 /* CustomShapesBootcamp.swift in Sources */,
 				7F9CCF4B275BC658007A3B26 /* CustomCurvesBootcamp.swift in Sources */,
-				7F12181B275D3918004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */,
 				7F9CCF58275CEB3F007A3B26 /* PreferenceKeyBootcamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
