@@ -54,13 +54,16 @@ struct UITextFieldRepresentable: UIViewRepresentable {
         self.placeholderColor = placeholderColor
     }
     
+    
+    // here at init time.
+    // initialize the UIKit Elements by passing data from SwiftUI
     func makeUIView(context: Context) -> UITextField {
         let textfield =  getTextfield()
         textfield.delegate = context.coordinator
         return textfield
     }
     
-    // from SwiftUI to UIKit
+    // from SwiftUI to UIKit for any Updates
     func updateUIView(_ uiView: UITextField, context: Context) {
         uiView.text = text
     }
@@ -98,5 +101,20 @@ struct UITextFieldRepresentable: UIViewRepresentable {
         func textFieldDidChangeSelection(_ textField: UITextField) {
             text = textField.text ?? ""
         }
+    }
+}
+
+
+// Basic UIView representation in SwiftUI
+struct BasicUIView: UIViewRepresentable {
+    
+    func makeUIView(context: Context) -> some UIView {
+        let view = UIView()
+        view.backgroundColor = UIColor.red
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
     }
 }
