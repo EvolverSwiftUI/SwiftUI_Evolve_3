@@ -14,7 +14,8 @@ struct SwiftUI_Evolve_3App: App {
             //ViewModifierBootcamp()
 //            AnyTransitionBootcamp()
 //            MatchedGeometryEffectExample()
-            CustomCurvesBootcamp()
+//            CustomCurvesBootcamp()
+            UIViewRepresentableBootcamp()
         }
     }
 }
