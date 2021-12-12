@@ -11,6 +11,8 @@
 		7F121820275D397E004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12181F275D397E004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
 		7F121824275D3AC9004BC818 /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F121823275D3AC9004BC818 /* AppTabBarView.swift */; };
 		7F121829275D41C2004BC818 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F121828275D41C2004BC818 /* CustomTabBarView.swift */; };
+		7F22D60D27668A72004C2932 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22D60C27668A72004C2932 /* DependencyInjectionBootcamp.swift */; };
+		7F4BF41927653C2B001BE367 /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BF41827653C2B001BE367 /* ProtocolsBootcamp.swift */; };
 		7F7A6360275DBE2500E88347 /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A635F275DBE2500E88347 /* CustomTabBarContainerView.swift */; };
 		7F7A6364275DC55B00E88347 /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A6363275DC55B00E88347 /* TabBarItemsPreferenceKey.swift */; };
 		7F7C8E9F27651D1D0077F527 /* UIViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C8E9E27651D1D0077F527 /* UIViewRepresentableBootcamp.swift */; };
@@ -35,6 +37,8 @@
 		7F12181F275D397E004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		7F121823275D3AC9004BC818 /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
 		7F121828275D41C2004BC818 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		7F22D60C27668A72004C2932 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
+		7F4BF41827653C2B001BE367 /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
 		7F7A635F275DBE2500E88347 /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		7F7A6363275DC55B00E88347 /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
 		7F7C8E9E27651D1D0077F527 /* UIViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				7F7C8E9D27651CF10077F527 /* CustomNavView */,
 				7F7C8E9E27651D1D0077F527 /* UIViewRepresentableBootcamp.swift */,
 				7F7C8EA727652FD60077F527 /* UIViewControllerRepresentableBootcamp.swift */,
+				7F4BF41827653C2B001BE367 /* ProtocolsBootcamp.swift */,
+				7F22D60C27668A72004C2932 /* DependencyInjectionBootcamp.swift */,
 				7F9CCF2E275B2B9E007A3B26 /* Assets.xcassets */,
 				7F9CCF33275B2B9E007A3B26 /* Info.plist */,
 				7F9CCF30275B2B9E007A3B26 /* Preview Content */,
@@ -213,10 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F22D60D27668A72004C2932 /* DependencyInjectionBootcamp.swift in Sources */,
 				7F7A6364275DC55B00E88347 /* TabBarItemsPreferenceKey.swift in Sources */,
 				7F9CCF3F275B458D007A3B26 /* ButtonStyleBootcamp.swift in Sources */,
 				7F9CCF3B275B2BAF007A3B26 /* ViewModifierBootcamp.swift in Sources */,
 				7F9CCF42275B5B5D007A3B26 /* AnyTransitionBootcamp.swift in Sources */,
+				7F4BF41927653C2B001BE367 /* ProtocolsBootcamp.swift in Sources */,
 				7F9CCF2B275B2B9C007A3B26 /* SwiftUI_Evolve_3App.swift in Sources */,
 				7F121824275D3AC9004BC818 /* AppTabBarView.swift in Sources */,
 				7F9CCF4E275CA827007A3B26 /* AnimatableDataBootcamp.swift in Sources */,
