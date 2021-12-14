@@ -8,12 +8,10 @@
 import SwiftUI
 import Combine
 
-
 // PROBLEMS WITH SINGLETONS
 // 1. Singleton's are GLOBAL.
 // 2. Can't customize the init!
 // 3. Can't swap out dependencies
-
 
 // To pass multiple dependencies
 // through app by using a class of Depedencies

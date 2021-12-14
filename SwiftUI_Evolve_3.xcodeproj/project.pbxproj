@@ -11,6 +11,10 @@
 		7F121820275D397E004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12181F275D397E004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
 		7F121824275D3AC9004BC818 /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F121823275D3AC9004BC818 /* AppTabBarView.swift */; };
 		7F121829275D41C2004BC818 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F121828275D41C2004BC818 /* CustomTabBarView.swift */; };
+		7F18578F2767001600193D39 /* UnitTestingBootcampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18578E2767001600193D39 /* UnitTestingBootcampView.swift */; };
+		7F185792276702DC00193D39 /* UnitTestingBootcampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F185791276702DC00193D39 /* UnitTestingBootcampViewModel.swift */; };
+		7F18579B2767043400193D39 /* SwiftUI_Evolve_3_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18579A2767043400193D39 /* SwiftUI_Evolve_3_Tests.swift */; };
+		7F1857A52767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1857A42767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift */; };
 		7F22D60D27668A72004C2932 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22D60C27668A72004C2932 /* DependencyInjectionBootcamp.swift */; };
 		7F4BF41927653C2B001BE367 /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BF41827653C2B001BE367 /* ProtocolsBootcamp.swift */; };
 		7F7A6360275DBE2500E88347 /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A635F275DBE2500E88347 /* CustomTabBarContainerView.swift */; };
@@ -32,11 +36,27 @@
 		7F9CCF58275CEB3F007A3B26 /* PreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9CCF57275CEB3F007A3B26 /* PreferenceKeyBootcamp.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7F18579D2767043400193D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F9CCF1F275B2B9C007A3B26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F9CCF26275B2B9C007A3B26;
+			remoteInfo = SwiftUI_Evolve_3;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		7F121811275D2347004BC818 /* GeometryPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		7F12181F275D397E004BC818 /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		7F121823275D3AC9004BC818 /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
 		7F121828275D41C2004BC818 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		7F18578E2767001600193D39 /* UnitTestingBootcampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampView.swift; sourceTree = "<group>"; };
+		7F185791276702DC00193D39 /* UnitTestingBootcampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampViewModel.swift; sourceTree = "<group>"; };
+		7F1857982767043400193D39 /* SwiftUI_Evolve_3_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_Evolve_3_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F18579A2767043400193D39 /* SwiftUI_Evolve_3_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Evolve_3_Tests.swift; sourceTree = "<group>"; };
+		7F18579C2767043400193D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F1857A42767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampViewModel_Tests.swift; sourceTree = "<group>"; };
 		7F22D60C27668A72004C2932 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
 		7F4BF41827653C2B001BE367 /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
 		7F7A635F275DBE2500E88347 /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
@@ -61,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F1857952767043400193D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F9CCF24275B2B9C007A3B26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +119,25 @@
 			path = CustomTabView;
 			sourceTree = "<group>";
 		};
+		7F18578D2766FFF500193D39 /* UnitTestingBootcamp */ = {
+			isa = PBXGroup;
+			children = (
+				7F18578E2767001600193D39 /* UnitTestingBootcampView.swift */,
+				7F185791276702DC00193D39 /* UnitTestingBootcampViewModel.swift */,
+			);
+			path = UnitTestingBootcamp;
+			sourceTree = "<group>";
+		};
+		7F1857992767043400193D39 /* SwiftUI_Evolve_3_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7F18579A2767043400193D39 /* SwiftUI_Evolve_3_Tests.swift */,
+				7F1857A42767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift */,
+				7F18579C2767043400193D39 /* Info.plist */,
+			);
+			path = SwiftUI_Evolve_3_Tests;
+			sourceTree = "<group>";
+		};
 		7F7C8E9D27651CF10077F527 /* CustomNavView */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				7F9CCF29275B2B9C007A3B26 /* SwiftUI_Evolve_3 */,
+				7F1857992767043400193D39 /* SwiftUI_Evolve_3_Tests */,
 				7F9CCF28275B2B9C007A3B26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				7F9CCF27275B2B9C007A3B26 /* SwiftUI_Evolve_3.app */,
+				7F1857982767043400193D39 /* SwiftUI_Evolve_3_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +183,7 @@
 				7F7C8EA727652FD60077F527 /* UIViewControllerRepresentableBootcamp.swift */,
 				7F4BF41827653C2B001BE367 /* ProtocolsBootcamp.swift */,
 				7F22D60C27668A72004C2932 /* DependencyInjectionBootcamp.swift */,
+				7F18578D2766FFF500193D39 /* UnitTestingBootcamp */,
 				7F9CCF2E275B2B9E007A3B26 /* Assets.xcassets */,
 				7F9CCF33275B2B9E007A3B26 /* Info.plist */,
 				7F9CCF30275B2B9E007A3B26 /* Preview Content */,
@@ -153,6 +202,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7F1857972767043400193D39 /* SwiftUI_Evolve_3_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F18579F2767043400193D39 /* Build configuration list for PBXNativeTarget "SwiftUI_Evolve_3_Tests" */;
+			buildPhases = (
+				7F1857942767043400193D39 /* Sources */,
+				7F1857952767043400193D39 /* Frameworks */,
+				7F1857962767043400193D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F18579E2767043400193D39 /* PBXTargetDependency */,
+			);
+			name = SwiftUI_Evolve_3_Tests;
+			productName = SwiftUI_Evolve_3_Tests;
+			productReference = 7F1857982767043400193D39 /* SwiftUI_Evolve_3_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7F9CCF26275B2B9C007A3B26 /* SwiftUI_Evolve_3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F9CCF36275B2B9E007A3B26 /* Build configuration list for PBXNativeTarget "SwiftUI_Evolve_3" */;
@@ -179,6 +246,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					7F1857972767043400193D39 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7F9CCF26275B2B9C007A3B26;
+					};
 					7F9CCF26275B2B9C007A3B26 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -198,11 +269,19 @@
 			projectRoot = "";
 			targets = (
 				7F9CCF26275B2B9C007A3B26 /* SwiftUI_Evolve_3 */,
+				7F1857972767043400193D39 /* SwiftUI_Evolve_3_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7F1857962767043400193D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F9CCF25275B2B9C007A3B26 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,10 +294,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7F1857942767043400193D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F1857A52767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift in Sources */,
+				7F18579B2767043400193D39 /* SwiftUI_Evolve_3_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F9CCF23275B2B9C007A3B26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F185792276702DC00193D39 /* UnitTestingBootcampViewModel.swift in Sources */,
 				7F22D60D27668A72004C2932 /* DependencyInjectionBootcamp.swift in Sources */,
 				7F7A6364275DC55B00E88347 /* TabBarItemsPreferenceKey.swift in Sources */,
 				7F9CCF3F275B458D007A3B26 /* ButtonStyleBootcamp.swift in Sources */,
@@ -229,6 +318,7 @@
 				7F121824275D3AC9004BC818 /* AppTabBarView.swift in Sources */,
 				7F9CCF4E275CA827007A3B26 /* AnimatableDataBootcamp.swift in Sources */,
 				7F121829275D41C2004BC818 /* CustomTabBarView.swift in Sources */,
+				7F18578F2767001600193D39 /* UnitTestingBootcampView.swift in Sources */,
 				7F9CCF55275CDDC0007A3B26 /* ViewBuilderBootcamp.swift in Sources */,
 				7F9CCF51275CB519007A3B26 /* GenericsBootcamp.swift in Sources */,
 				7F121812275D2347004BC818 /* GeometryPreferenceKeyBootcamp.swift in Sources */,
@@ -245,7 +335,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7F18579E2767043400193D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F9CCF26275B2B9C007A3B26 /* SwiftUI_Evolve_3 */;
+			targetProxy = 7F18579D2767043400193D39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		7F1857A02767043400193D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftUI_Evolve_3_Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.org.SwiftUI-Evolve-3-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUI_Evolve_3.app/SwiftUI_Evolve_3";
+			};
+			name = Debug;
+		};
+		7F1857A12767043400193D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftUI_Evolve_3_Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.org.SwiftUI-Evolve-3-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUI_Evolve_3.app/SwiftUI_Evolve_3";
+			};
+			name = Release;
+		};
 		7F9CCF34275B2B9E007A3B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,6 +543,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7F18579F2767043400193D39 /* Build configuration list for PBXNativeTarget "SwiftUI_Evolve_3_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F1857A02767043400193D39 /* Debug */,
+				7F1857A12767043400193D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7F9CCF22275B2B9C007A3B26 /* Build configuration list for PBXProject "SwiftUI_Evolve_3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
