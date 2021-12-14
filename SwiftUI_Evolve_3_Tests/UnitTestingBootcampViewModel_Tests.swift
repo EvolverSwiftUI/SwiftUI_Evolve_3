@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import SwiftUI_Evolve_3
+import Combine
 
 // Naming Structure     : test_UnitOfWork_StateUnderTest_ExpectedBehaviour
 // Naming Structure     : test_[struct or class]_[variable or function]_[expected result]
@@ -16,6 +17,7 @@ import XCTest
 class UnitTestingBootcampViewModel_Tests: XCTestCase {
 
     var viewmodel: UnitTestingBootcampViewModel?
+    var cancellables = Set<AnyCancellable>()
     
     override func setUpWithError() throws {
         viewmodel = UnitTestingBootcampViewModel(isPremium: Bool.random())
@@ -254,4 +256,76 @@ class UnitTestingBootcampViewModel_Tests: XCTestCase {
             XCTFail()
         }
     }
+    
+    func test_UnitTestingBootcampViewModel_downloadWithEscaping_shouldReturnItems() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+
+        // When
+        let expectation = XCTestExpectation(description: "Should return items after 3 seconds.")
+        vm.$dataArray
+            .dropFirst()
+            .sink { (returnedItems) in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        vm.downloadWithEscaping()
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+        
+    }
+    
+    func test_UnitTestingBootcampViewModel_downloadWithCombine_shouldReturnItems() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+
+        // When
+        let expectation = XCTestExpectation(description: "Should return items after a second.")
+        vm.$dataArray
+            .dropFirst()
+            .sink { (returnedItems) in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        vm.downloadWithCombine()
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+        
+    }
+
+    func test_UnitTestingBootcampViewModel_downloadWithCombine_shouldReturnItems2() {
+        // Given
+        let items: [String] = [
+            UUID().uuidString,
+            UUID().uuidString,
+            UUID().uuidString,
+            UUID().uuidString,
+            UUID().uuidString
+        ]
+        let dataService: NewDataServiceProtocol = NewMockDataService(items: items)
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random(), dataService: dataService)
+
+        // When
+        let expectation = XCTestExpectation(description: "Should return items after a second.")
+        vm.$dataArray
+            .dropFirst()
+            .sink { (returnedItems) in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        vm.downloadWithCombine()
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+        XCTAssertEqual(vm.dataArray.count, items.count)
+    }
+
 }

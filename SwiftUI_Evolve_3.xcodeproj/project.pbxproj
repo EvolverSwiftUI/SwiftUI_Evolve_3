@@ -17,6 +17,8 @@
 		7F1857A52767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1857A42767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift */; };
 		7F22D60D27668A72004C2932 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22D60C27668A72004C2932 /* DependencyInjectionBootcamp.swift */; };
 		7F4BF41927653C2B001BE367 /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BF41827653C2B001BE367 /* ProtocolsBootcamp.swift */; };
+		7F62FB032768DC6700069D0D /* NewMockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62FB022768DC6700069D0D /* NewMockDataService.swift */; };
+		7F62FB072768DDC200069D0D /* NewMockDataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62FB062768DDC200069D0D /* NewMockDataService_Tests.swift */; };
 		7F7A6360275DBE2500E88347 /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A635F275DBE2500E88347 /* CustomTabBarContainerView.swift */; };
 		7F7A6364275DC55B00E88347 /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A6363275DC55B00E88347 /* TabBarItemsPreferenceKey.swift */; };
 		7F7C8E9F27651D1D0077F527 /* UIViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C8E9E27651D1D0077F527 /* UIViewRepresentableBootcamp.swift */; };
@@ -59,6 +61,8 @@
 		7F1857A42767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampViewModel_Tests.swift; sourceTree = "<group>"; };
 		7F22D60C27668A72004C2932 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
 		7F4BF41827653C2B001BE367 /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
+		7F62FB022768DC6700069D0D /* NewMockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService.swift; sourceTree = "<group>"; };
+		7F62FB062768DDC200069D0D /* NewMockDataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService_Tests.swift; sourceTree = "<group>"; };
 		7F7A635F275DBE2500E88347 /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		7F7A6363275DC55B00E88347 /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
 		7F7C8E9E27651D1D0077F527 /* UIViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			children = (
 				7F18578E2767001600193D39 /* UnitTestingBootcampView.swift */,
 				7F185791276702DC00193D39 /* UnitTestingBootcampViewModel.swift */,
+				7F62FB022768DC6700069D0D /* NewMockDataService.swift */,
 			);
 			path = UnitTestingBootcamp;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			children = (
 				7F18579A2767043400193D39 /* SwiftUI_Evolve_3_Tests.swift */,
 				7F1857A42767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift */,
+				7F62FB062768DDC200069D0D /* NewMockDataService_Tests.swift */,
 				7F18579C2767043400193D39 /* Info.plist */,
 			);
 			path = SwiftUI_Evolve_3_Tests;
@@ -300,6 +306,7 @@
 			files = (
 				7F1857A52767064100193D39 /* UnitTestingBootcampViewModel_Tests.swift in Sources */,
 				7F18579B2767043400193D39 /* SwiftUI_Evolve_3_Tests.swift in Sources */,
+				7F62FB072768DDC200069D0D /* NewMockDataService_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +324,7 @@
 				7F9CCF2B275B2B9C007A3B26 /* SwiftUI_Evolve_3App.swift in Sources */,
 				7F121824275D3AC9004BC818 /* AppTabBarView.swift in Sources */,
 				7F9CCF4E275CA827007A3B26 /* AnimatableDataBootcamp.swift in Sources */,
+				7F62FB032768DC6700069D0D /* NewMockDataService.swift in Sources */,
 				7F121829275D41C2004BC818 /* CustomTabBarView.swift in Sources */,
 				7F18578F2767001600193D39 /* UnitTestingBootcampView.swift in Sources */,
 				7F9CCF55275CDDC0007A3B26 /* ViewBuilderBootcamp.swift in Sources */,
