@@ -121,8 +121,9 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //})
             //.tryMin(by: { })
         */
-            
-            // Filtering & Reducing Operations
+
+            // Filtering & Reducing Operations:
+        /*
             //.map({ String($0) })
             //.tryMap({ int in
             //    if int == 5 {
@@ -151,9 +152,26 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //})
             //.tryRemoveDuplicates(by: <#T##(Int, Int) throws -> Bool#>)
             //.replaceNil(with: 5)
-            
-            
-            
+            //.replaceEmpty(with: 6)
+            //.replaceError(with: "DEFAULT VALUE")
+            //.scan(0, { (existingValue, newValue) in
+            //    return existingValue + newValue
+            //})
+            //.scan(0, { $0 + $1 })
+            //.scan(0, +)
+            //.tryScan(, {})
+            //.reduce(0, { (existingValue, newValue) in
+            //    return existingValue + newValue
+            //})
+            //.reduce(0, { $0 + $1 })
+            //.reduce(0, +)
+            //.map({ String($0) })
+            //.collect()
+            //.collect(3)
+            //.allSatisfy({ $0 == 5 }) // useful when we have child subscribers
+            //.allSatisfy({ $0 < 55 })
+            //.tryAllSatisfy({})
+        */
             
             
             
@@ -168,6 +186,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
                     break
                 }
             } receiveValue: { [weak self] returnedValue in
+                //self?.data.append(contentsOf: returnedValue)
                 //self?.data = returnedValue
                 self?.data.append(returnedValue)
             }
