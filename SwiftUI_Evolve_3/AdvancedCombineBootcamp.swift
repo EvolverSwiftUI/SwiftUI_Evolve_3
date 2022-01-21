@@ -17,7 +17,9 @@ class AdvancedCombineDataService {
     let currentValuePublisher = CurrentValueSubject<String, Error>("first publish")
     //let passThroughPublisher = PassthroughSubject<String, Error>()
     let passThroughPublisher = PassthroughSubject<Int, Error>()
-
+    let boolPublisher = PassthroughSubject<Bool, Error>()
+    let intPublisher = PassthroughSubject<Int, Error>()
+    
     init() {
         publishFakeData()
     }
@@ -38,6 +40,13 @@ class AdvancedCombineDataService {
                 //self.currentValuePublisher.send(items[x])
                 //self.passThroughPublisher.send(items[x])
                 self.passThroughPublisher.send(items[x])
+                
+                if (x > 4 && x < 8) {
+                    self.boolPublisher.send(true)
+                    self.intPublisher.send(999)
+                } else {
+                    self.boolPublisher.send(false)
+                }
                 
                 if x == items.indices.last {
                     self.passThroughPublisher.send(completion: .finished)
@@ -202,11 +211,47 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //.timeout(3, scheduler: DispatchQueue.main)
             //.timeout(0.75, scheduler: DispatchQueue.main)
         */
+
+            // Multiple Publishers & Subscribers:
+        /*
+            //.combineLatest(dataService.boolPublisher)
+            //.compactMap({ (int, bool) in
+            //    if bool {
+            //        return String(int)
+            //    }
+            //    return nil
+            //})
+            //.compactMap({$1 ? String($0) : nil })
+            //.removeDuplicates()
+            //.compactMap({$1 ? String($0) : "n/a" })
+            //.combineLatest(dataService.boolPublisher, dataService.intPublisher)
+            //.compactMap({ (int1, bool, int2) in
+            //    if bool {
+            //        return String(int1)
+            //    }
+            //    return "n/a"
+            //})
+            //.merge(with: dataService.intPublisher)
+            //.zip(dataService.boolPublisher)
+            //.map({ tuple in
+            //    return String(tuple.0) + tuple.1.description
+            //})
+            //.zip(dataService.boolPublisher, dataService.intPublisher)
+            //.map({ tuple in
+            //    return String(tuple.0) + tuple.1.description + String(tuple.2)
+            //})
+            //.tryMap({ int in
+            //    if int == 5 {
+            //        throw URLError(.badServerResponse)
+            //    }
+            //    return int
+            //})
+            //.catch({ error in
+            //    return self.dataService.intPublisher
+            //})
+        */
             
-            
-            
-            
-            
+            //
             
             .map({ String($0) })
             .sink { completion in
