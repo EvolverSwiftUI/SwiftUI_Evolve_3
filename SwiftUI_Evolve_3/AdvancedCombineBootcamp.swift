@@ -31,6 +31,7 @@ class AdvancedCombineDataService {
         //let items = Array(0..<11)
         //let items = Array(1..<11)
         let items = [1,2,3,4,4,5,4,6,8,9,10]
+        ///*
         for x in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
                 //self.basicPublisher = items[x]
@@ -43,6 +44,20 @@ class AdvancedCombineDataService {
                 }
             }
         }
+        //*/
+        
+        // Debounce Example:
+        /*
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+            self.passThroughPublisher.send(1)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.passThroughPublisher.send(2)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.passThroughPublisher.send(3)
+        }
+        */
     }
 }
 
@@ -172,6 +187,24 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //.allSatisfy({ $0 < 55 })
             //.tryAllSatisfy({})
         */
+            
+            // Timing Operations:
+        /*
+            //.debounce(for: 0.75, scheduler: DispatchQueue.main)
+            //.delay(for: 2, scheduler: DispatchQueue.main)
+            //.measureInterval(using: DispatchQueue.main)
+            //.map({ stride in
+            //    return "\(stride.timeInterval)"
+            //})
+            //.throttle(for: 10, scheduler: DispatchQueue.main, latest: true)
+            //.throttle(for: 10, scheduler: DispatchQueue.main, latest: false)
+            //.retry(3)
+            //.timeout(3, scheduler: DispatchQueue.main)
+            //.timeout(0.75, scheduler: DispatchQueue.main)
+        */
+            
+            
+            
             
             
             
