@@ -28,14 +28,19 @@ class AdvancedCombineDataService {
 //        }
         
         //let items = ["one", "two", "three"]
-        let items = Array(0..<11)
-
+        //let items = Array(0..<11)
+        //let items = Array(1..<11)
+        let items = [1,2,3,4,4,5,4,6,8,9,10]
         for x in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
                 //self.basicPublisher = items[x]
                 //self.currentValuePublisher.send(items[x])
                 //self.passThroughPublisher.send(items[x])
                 self.passThroughPublisher.send(items[x])
+                
+                if x == items.indices.last {
+                    self.passThroughPublisher.send(completion: .finished)
+                }
             }
         }
     }
@@ -44,6 +49,8 @@ class AdvancedCombineDataService {
 class AdvancedCombineBootcampViewModel: ObservableObject {
     
     @Published var data: [String] = []
+    @Published var error: String = ""
+
     let dataService = AdvancedCombineDataService()
     
     var cancellables = Set<AnyCancellable>()
@@ -56,13 +63,108 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
         //dataService.$basicPublisher
         //dataService.currentValuePublisher
         dataService.passThroughPublisher
+            
+            // Sequence Operations:
+        /*
+            //.first()
+            //.first(where: { int in
+            //        return int > 4
+            //})
+            //.first(where: { $0 > 4 })
+            //.tryFirst(where: { int in
+            //    if int == 3 {
+            //        throw URLError(.badServerResponse)
+            //    }
+            //    //return int > 4
+            //    return int > 1
+            //})
+            //.last()
+            //.last(where: { $0 > 4 })
+            //.last(where: { $0 < 4 })
+            //.tryLast(where: { int in
+            //    if int == 3 {
+            //        throw URLError(.badServerResponse)
+            //    }
+            //    if int == 13 {
+            //        throw URLError(.badServerResponse)
+            //    }
+            //    return int > 1
+            //})
+            //.dropFirst()
+            //.dropFirst(3)
+            //.drop(while: { $0 < 5 })
+            //.tryDrop(while: { int in
+            //    //if int == 5 {
+            //    if int == 15 {
+            //        throw URLError(.badServerResponse)
+            //    }
+            //    return int < 6
+            //})
+            //.prefix(4)
+            //.prefix(while: { $0 > 5 })
+            //.prefix(while: { $0 < 5 })
+            //.tryPrefix(while: {})
+            //.output(at: 1)
+            //.output(in: 2..<4)
+        */
+            
+            // Mathematic Operations:
+        /*
+            //.max()
+            //.max(by: { int1, int2 in
+            //    return int1 < int2
+            //})
+            //.tryMax(by: { })
+            //.min()
+            //.min(by: { int1, int2 in
+            //    return int1 > int2
+            //})
+            //.tryMin(by: { })
+        */
+            
+            // Filtering & Reducing Operations
+            //.map({ String($0) })
+            //.tryMap({ int in
+            //    if int == 5 {
+            //        throw URLError(.badServerResponse)
+            //    }
+            //    return String(int)
+            //})
+            //.compactMap({ int in
+            //    if int == 5 {
+            //        return nil
+            //    }
+            //    return String(int)
+            //    return "\(int)"
+            //})
+            //.tryCompactMap({ int in
+            //    if int == 5 {
+            //        throw URLError(.badServerResponse)
+            //    }
+            //    return String(int)
+            //})
+            //.filter({ ($0>4) && ($0<7) })
+            //.tryFilter({ })
+            //.removeDuplicates() // only back to back duplicates are removed
+            //.removeDuplicates(by: { int1, int2 in
+            //    return int1 == int2
+            //})
+            //.tryRemoveDuplicates(by: <#T##(Int, Int) throws -> Bool#>)
+            //.replaceNil(with: 5)
+            
+            
+            
+            
+            
+            
             .map({ String($0) })
             .sink { completion in
                 switch completion {
                 case .finished:
                     break
                 case .failure(let error):
-                    debugPrint("ERROR: \(error.localizedDescription)")
+                    self.error = "ERROR: \(error.localizedDescription)"
+                    //debugPrint("ERROR: \(error.localizedDescription)")
                     break
                 }
             } receiveValue: { [weak self] returnedValue in
@@ -84,6 +186,10 @@ struct AdvancedCombineBootcamp: View {
                     Text($0)
                         .font(.largeTitle)
                         .fontWeight(.black)
+                }
+                
+                if !vm.error.isEmpty {
+                    Text(vm.error)
                 }
             }
         }
