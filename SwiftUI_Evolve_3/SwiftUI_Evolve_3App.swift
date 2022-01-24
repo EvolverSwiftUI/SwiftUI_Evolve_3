@@ -16,7 +16,8 @@ struct SwiftUI_Evolve_3App: App {
 //            MatchedGeometryEffectExample()
 //            CustomCurvesBootcamp()
 //            UIViewRepresentableBootcamp()
-            UIViewControllerRepresentableBootcamp()
+//            UIViewControllerRepresentableBootcamp()
+            FuturesBootcamp()
         }
     }
 }
