@@ -73,11 +73,14 @@ class AdvancedCombineDataService {
 class AdvancedCombineBootcampViewModel: ObservableObject {
     
     @Published var data: [String] = []
+    @Published var dataBools: [Bool] = []
     @Published var error: String = ""
 
     let dataService = AdvancedCombineDataService()
     
     var cancellables = Set<AnyCancellable>()
+    
+    let multiCastPublisher = PassthroughSubject<Int, Error>()
     
     init() {
         addSubscribers()
@@ -86,7 +89,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
     private func addSubscribers() {
         //dataService.$basicPublisher
         //dataService.currentValuePublisher
-        dataService.passThroughPublisher
+        //dataService.passThroughPublisher
             
             // Sequence Operations:
         /*
@@ -213,7 +216,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
         */
 
             // Multiple Publishers & Subscribers:
-        /*
+        ///*
             //.combineLatest(dataService.boolPublisher)
             //.compactMap({ (int, bool) in
             //    if bool {
@@ -249,10 +252,18 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //.catch({ error in
             //    return self.dataService.intPublisher
             //})
-        */
             
-            //
             
+        let sharedPublisher = dataService.passThroughPublisher
+            //.dropFirst(3)
+            .share()
+            //.multicast {
+            //    PassthroughSubject<Int, Error>()
+            //}
+            .multicast(subject: multiCastPublisher)
+            
+        //dataService.passThroughPublisher
+        sharedPublisher
             .map({ String($0) })
             .sink { completion in
                 switch completion {
@@ -269,6 +280,31 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
                 self?.data.append(returnedValue)
             }
             .store(in: &cancellables)
+        
+        //dataService.passThroughPublisher
+        sharedPublisher
+            .map({ $0 > 5 ? true : false })
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    self.error = "ERROR: \(error.localizedDescription)"
+                    //debugPrint("ERROR: \(error.localizedDescription)")
+                    break
+                }
+            } receiveValue: { [weak self] returnedValue in
+                //self?.data.append(contentsOf: returnedValue)
+                //self?.data = returnedValue
+                self?.dataBools.append(returnedValue)
+            }
+            .store(in: &cancellables)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            sharedPublisher
+                .connect()
+                .store(in: &self.cancellables)
+        }
     }
 }
 
@@ -278,15 +314,25 @@ struct AdvancedCombineBootcamp: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                ForEach(vm.data, id: \.self) {
-                    Text($0)
-                        .font(.largeTitle)
-                        .fontWeight(.black)
+            HStack {
+                VStack {
+                    ForEach(vm.data, id: \.self) {
+                        Text($0)
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                    }
+                    
+                    if !vm.error.isEmpty {
+                        Text(vm.error)
+                    }
                 }
                 
-                if !vm.error.isEmpty {
-                    Text(vm.error)
+                VStack {
+                    ForEach(vm.dataBools, id: \.self) {
+                        Text($0.description)
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                    }
                 }
             }
         }
